@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        function sum() {//そのまま計算式に入れると文字列なので、数値型に変換して計算する。
+            var form = document.forms['form'];
+            var a = parseFloat(form.a.value);
+            var b = parseFloat(form.b.value);
+            form.c.value = a + b;
+        }
+    </script>
+</head>
+
+<body>
+    2つの数の和を求めます。
+    <br>
+    <form name="form">
+        <input type="text" name="a" size=10><br>
+        <input type="text" name="b" size=10><br>
+        <input type="button" value="合計" onclick="sum()"><br>
+        <input type="text" name="c" size=10><br>
+    </form>
+</body>
+
+</html>
